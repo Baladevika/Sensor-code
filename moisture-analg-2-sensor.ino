@@ -21,7 +21,7 @@ void pinconnection(int sensor, int output) {
 }
 // **Condition**
 void condition(int sensor, int output,String data) {
-  if (analogRead(sensor) == 300) {
+  if (analogRead(sensor) > 300) {
     digitalWrite(output, HIGH);
     Serial.println(data);
     Serial.println("Soil is Dry Stae");
