@@ -24,13 +24,13 @@ void condition(int sensor, int output,String data) {
   if (digitalRead(sensor) == LOW) {
     digitalWrite(output, HIGH);
     Serial.println(data);
-    Serial.println("LED ON");
+    Serial.println("Flame Detected");
     delay(1000);
     
   } else {
     Serial.println(data);
     digitalWrite(output, LOW);
-    Serial.println("LED OFF");
+    Serial.println("Flame Not detected");
     delay(1000);
   }
 }
